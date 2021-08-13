@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:internship/newapp/home.dart';
 
-import 'bottom_home.dart';
+import '../home/home.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -44,24 +43,73 @@ class _LoginState extends State<Login> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-            
                 SizedBox(
                   height: 5,
                 ),
-                TextFormField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintStyle: TextStyle(color: Colors.grey),
-                        contentPadding: EdgeInsets.all(8),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Colors.grey.shade500, width: 0.7)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Colors.grey.shade500, width: 0.7)),
-                        hintText: "Username")),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Email',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'OpenSans',
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF6CA8F1),
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 6.0,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      height: 60.0,
+                      child: TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'OpenSans',
+                        ),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(top: 14.0),
+                          prefixIcon: Icon(
+                            Icons.email,
+                            color: Colors.white,
+                          ),
+                          hintText: 'Enter your Email',
+                          hintStyle: TextStyle(
+                            color: Colors.white54,
+                            fontFamily: 'OpenSans',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                // TextFormField(
+                //     style: TextStyle(color: Colors.black),
+                //     decoration: InputDecoration(
+                //         filled: true,
+                //         fillColor: Colors.white,
+                //         hintStyle: TextStyle(color: Colors.grey),
+                //         contentPadding: EdgeInsets.all(8),
+                //         enabledBorder: OutlineInputBorder(
+                //             borderSide: BorderSide(
+                //                 color: Colors.grey.shade500, width: 0.7)),
+                //         focusedBorder: OutlineInputBorder(
+                //             borderSide: BorderSide(
+                //                 color: Colors.grey.shade500, width: 0.7)),
+                //         hintText: "Username")),
                 SizedBox(
                   height: 15,
                 ),
